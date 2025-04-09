@@ -13,7 +13,7 @@ Currently, the Student object has methods like `borrowBook()`, `borrowJournal()`
 - **L: Liskov Substitution** - you can pass a `Book` or `Journal` (both `LibraryResource`) to `BorrowService` without breaking anything.
 - **I: Interface Segregation** - `LibraryResource` has only one method: `borrow()`. 
 - **D: Dependency Inversion** - `BorrowService` depends on the interface `LibraryResource`, not concrete classes like `Book` or `Journal`. This promotes **loose coupling and flexibility**.
-- **Strategy Pattern** - Encapsulates interchangeable algorithms/behaviors and allows them to vary independently from clients that use them.
+- **Strategy Pattern** - Encapsulates interchangeable algorithms/behaviors and allows them to vary independently from clients that use them. <br>
 &emsp;&emsp;`LibraryResource` = strategy interface <br>
 &emsp;&emsp;`Book`, `Journal` = different strategies (different borrowing behaviors) <br>
 &emsp;&emsp;`BorrowService` = uses the strategy dynamically at runtime <br>
